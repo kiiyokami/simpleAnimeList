@@ -1,21 +1,52 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title></title>
+<title>AniList</title>
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<<<<<<< Updated upstream
 <h1>AniList</h1>
+=======
+<nav>
+AniList
+</nav>
+
+<div class="center">
+<button class="btn" onclick="addEntity()"> <b>Add to List</b> </button>
+<button class="btn" onclick="updateEntity()"> <b>Update</b> </button>
+<button class="btn" onclick="deleteEntity()"> <b>Delete</b> </button>
+</div>
+
+
+<div class="form-popup" id="createNewEntity">
+	<form action="/php/newEntity.php" class="form-container">
+	<th>Title</th>
+	</form>
+</div>
+<div class="form-popup" id="updateEntity">
+	<form action="/php/updateEntity.php" class="form-container">
+	<th>Title</th>
+</div>
+<div class="form-popup" id="deleteEntity">
+	<form action="/php/deleteEntity.php" class="form-container">
+	<th>Title</th>
+
+</div>
+
+<div>
+>>>>>>> Stashed changes
 <table id="atable">
 	<tr>
-		<td>Title</td>
-		<td>English Title</td>
-		<td>Seasons</td>
-		<td>Episodes</td>
-		<td>Status</td>
-		<td>Rating</td>
-		<td>Date Started</td>
-		<td>Date Finished</td>
+		<th>Title</th>
+		<th>English Title</th>
+		<th>Seasons</th>
+		<th>Episodes</th>
+		<th>Status</th>
+		<th>Rating</th>
+		<th>Date Started</th>
+		<th>Date Finished</th>
 	</tr>
-
+</div>
 </body>
 </html>
