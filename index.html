@@ -5,6 +5,22 @@
 </head>
 <body>
 <h1>AniList</h1>
+<button class="addtoList" onclick="addEntity()"> Add to List </button>
+<button class="updateList" onclick="updateEntity()"> Update </button>
+<button class="deleteList" onclick="deleteEntity()"> Delete </button>
+
+<div class="form-popup" id="createNewEntity">
+	<form action="/php/newEntity.php" class="form-container">
+	</form>
+</div>
+<div class="form-popup" id="updateEntity">
+	<form action="/php/updateEntity.php" class="form-container">
+</div>
+<div class="form-popup" id="deleteEntity">
+	<form action="/php/deleteEntity.php" class="form-container">
+
+</div>
+
 <table id="atable">
 	<tr>
 		<td>Title</td>
