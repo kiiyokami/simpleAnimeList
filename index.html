@@ -5,11 +5,8 @@
 <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<<<<<<< Updated upstream
-<h1>AniList</h1>
-=======
 <nav>
-AniList
+<b>AniList</b>
 </nav>
 
 <div class="center">
@@ -21,7 +18,23 @@ AniList
 
 <div class="form-popup" id="createNewEntity">
 	<form action="/php/newEntity.php" class="form-container">
-	<th>Title</th>
+		<label for="title">Title<label>
+			<input type="text" id="title"><br>
+		<label for="engTitle">English Title<label>
+			<input type="text" id="engTitle"><br>
+		<label for="seasons">Seasons<label>
+			<input type="number" id="seasons"><br>
+		<label for="eps">Episodes<label>
+				<input type="number" id="eps"><br>
+		<label for="status">Status<label>
+			<input type="text" id="rating"><br>
+		<label for="rating">Rating (1-10)<label>
+			<input type="number" id="rating" min="1" max="10"><br>
+		<label for="dateStarted">Date Started<label>
+			<input type="date" id="dateStarted"><br>
+		<label for="dateFinished">Date Finished<label>
+			<input type="date" id="dateFinished"><br>
+		<button type="submit" class="btn">Submit</button>
 	</form>
 </div>
 <div class="form-popup" id="updateEntity">
@@ -35,7 +48,6 @@ AniList
 </div>
 
 <div>
->>>>>>> Stashed changes
 <table id="atable">
 	<tr>
 		<th>Title</th>
@@ -48,5 +60,8 @@ AniList
 		<th>Date Finished</th>
 	</tr>
 </div>
+
+<script src="js/form.js">
+</script>
 </body>
 </html>
