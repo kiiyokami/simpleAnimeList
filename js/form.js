@@ -1,10 +1,13 @@
 function addEntity(){
+	closeForm();
 	document.getElementById("createNewEntity").style.display = "block";
 }
 function updateEntity(){
+	closeForm();
 	document.getElementById("updateEntity").style.display = "block";
 }
 function deleteEntity(){
+	closeForm();
 	document.getElementById("deleteEntity").style.display = "block";
 }
 function closeForm() {

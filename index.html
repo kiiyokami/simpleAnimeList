@@ -18,32 +18,80 @@
 
 <div class="form-popup" id="createNewEntity">
 	<form action="/php/newEntity.php" class="form-container">
-		<label for="title">Title<label>
+		<label for="title">Title: <label>
 			<input type="text" id="title"><br>
-		<label for="engTitle">English Title<label>
+		<label for="engTitle">English Title: <label>
 			<input type="text" id="engTitle"><br>
-		<label for="seasons">Seasons<label>
-			<input type="number" id="seasons"><br>
-		<label for="eps">Episodes<label>
-				<input type="number" id="eps"><br>
-		<label for="status">Status<label>
-			<input type="text" id="rating"><br>
-		<label for="rating">Rating (1-10)<label>
-			<input type="number" id="rating" min="1" max="10"><br>
-		<label for="dateStarted">Date Started<label>
+		<label for="seasons">Seasons: <label>
+			<input type="number" id="seasons" min="1" max="99"><br>
+		<label for="eps">Episodes: <label>
+				<input type="number" id="eps" min="1" max="9999"><br>
+		<label for="status">Status: <label>
+			<select name="status" id="status">
+				<option value="inProgress">In Progress</option>
+				<option value="finished">Finished</option>
+				<option value="dropped">Dropped</option>
+				<option value="notStarted">Not Started</option>
+			</select><br>
+		<label for="rating">Rating (1-10): <label>
+			<input type="number" id="rating" min="1" max="10" maxlength="2"><br>
+		<label for="dateStarted">Date Started: <label>
 			<input type="date" id="dateStarted"><br>
-		<label for="dateFinished">Date Finished<label>
+		<label for="dateFinished">Date Finished: <label>
 			<input type="date" id="dateFinished"><br>
 		<button type="submit" class="btn">Submit</button>
 	</form>
 </div>
+<div class="form-popup" id="searchEntity">
+</div>
 <div class="form-popup" id="updateEntity">
 	<form action="/php/updateEntity.php" class="form-container">
-	<th>Title</th>
+	<label for="title">Title: <label>
+			<input type="text" id="title"><br>
+		<label for="engTitle">English Title: <label>
+			<input type="text" id="engTitle"><br>
+		<label for="seasons">Seasons: <label>
+			<input type="number" id="seasons" min="1" max="99"><br>
+		<label for="eps">Episodes: <label>
+				<input type="number" id="eps" min="1" max="9999"><br>
+		<label for="status">Status: <label>
+			<select name="status" id="status">
+				<option value="inProgress">In Progress</option>
+				<option value="finished">Finished</option>
+				<option value="dropped">Dropped</option>
+				<option value="notStarted">Not Started</option>
+			</select><br>
+		<label for="rating">Rating (1-10): <label>
+			<input type="number" id="rating" min="1" max="10" maxlength="2"><br>
+		<label for="dateStarted">Date Started: <label>
+			<input type="date" id="dateStarted"><br>
+		<label for="dateFinished">Date Finished: <label>
+			<input type="date" id="dateFinished"><br>
+		<button type="submit" class="btn">Update</button>
+	</form>
 </div>
 <div class="form-popup" id="deleteEntity">
 	<form action="/php/deleteEntity.php" class="form-container">
-	<th>Title</th>
+		<label for="id">ID: <label>
+			<input type="text" id="id" readonly><br>
+		<label for="title">Title: <label>
+			<input type="text" id="title" disabled><br>
+		<label for="engTitle">English Title: <label>
+			<input type="text" id="engTitle" disabled><br>
+		<label for="seasons">Seasons: <label>
+			<input type="number" id="seasons" min="1" max="99" disabled><br>
+		<label for="eps">Episodes: <label>
+			<input type="number" id="eps" min="1" max="9999" disabled><br>
+		<label for="status">Status: <label>
+			<input type="text" id="status" disabled><br>
+		<label for="rating">Rating (1-10): <label>
+			<input type="number" id="rating" min="1" max="10" maxlength="2" disabled><br>
+		<label for="dateStarted">Date Started: <label>
+			<input type="date" id="dateStarted" disabled><br>
+		<label for="dateFinished">Date Finished: <label>
+			<input type="date" id="dateFinished" disabled><br>
+		<button type="submit" class="btn">Delete</button>
+	</form>
 
 </div>
 

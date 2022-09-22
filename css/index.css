@@ -49,20 +49,49 @@ th,td{
 
 .form-container{
 	padding: 15px;
-	background-color:white;
 	font-size: 15px;
 	font-family: 'Trebuchet MS', sans-serif;
+	width:90%
 }
 
 .form-popup{
 	display:none;
+	background-color:white;
 	position:fixed;
-	border: 1px solid black;
-	margin-left:38%;
+	border: 2px solid black;
+	margin-left:25%;
 	margin-top:-7%;
+	width:40%
 }
 
 .form-container input[type=text]{
-	width:
+	width:60%;
+	padding:10px;
+	margin: 5px 0 15px 0;
+	border: 1px solid black;
+	background: #f1f1f1;
+}
+
+.form-container input[type=number]{
+	width:12%;
+	padding:10px;
+	margin: 5px 0 15px 0;
+	border: 1px solid black;
+	background: #f1f1f1;
+}
+
+.form-container input[type=date]{
+	width:30%;
+	padding:10px;
+	margin: 5px 0 15px 0;
+	border: 1px solid black;
+	background: #f1f1f1;
+}
+.form-container select{
+	width:30%;
+	padding:10px;
+	margin: 5px 0 15px 0;
+	border: 1px solid black;
+	background: #f1f1f1;
 }
 
