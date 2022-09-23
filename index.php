@@ -16,7 +16,7 @@
 </div>
 
 
-<div class="form-popup" id="addNewEntity">
+<div class="form-popup" id="createNewEntity">
 	<form action="php/newEntity.php" class="form-container" method="post">
 		<label for="title">Title: <label>
 			<input type="text" id="title" name="title"><br>
@@ -96,17 +96,47 @@
 </div>
 
 <div>
-<table id="atable">
-	<tr>
-		<th>Title</th>
-		<th>English Title</th>
-		<th>Seasons</th>
-		<th>Episodes</th>
-		<th>Status</th>
-		<th>Rating</th>
-		<th>Date Started</th>
-		<th>Date Finished</th>
-	</tr>
+<table>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>English Title</th>
+			<th>Seasons</th>
+			<th>Episodes</th>
+			<th>Status</th>
+			<th>Rating</th>
+			<th>Date Started</th>
+			<th>Date Finished</th>
+		</tr>
+	</thead>
+	<tbody class="aTableBody">
+	<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "password";
+	$dbname = "aniList";
+
+	$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+		$sql = "SELECT title, engTitle, seasons, eps, status, rating, dateStarted, dateFinished FROM animelist";
+    
+    	if ($result = mysqli_query($conn, $sql)) {
+        	if ($result->num_rows > 0){
+            	while($row = $result->fetch_assoc()){
+                	echo "<tr>";
+                	echo "<td>". $row["title"]."</td><td>".$row["engTitle"]."</td><td>".$row["seasons"]."</td><td>".$row["eps"]."</td><td>".$row["status"]."</td><td>".$row["rating"]."</td><td>".$row["dateStarted"]."</td><td>".$row["dateFinished"]."</td>";
+                	echo "</tr>";
+            }
+        }
+         
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+
+?>
+	</tbody>
 </div>
 
 <script src="js/form.js">
