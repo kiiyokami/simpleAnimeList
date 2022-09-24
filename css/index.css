@@ -6,9 +6,13 @@
 nav{
 	text-align:center;
 	background-color:white;
-	color: #DC143C;
+	color: #F7631C;
 	font-size: 36px;
 	font-family: 'Brush Script MT', cursive;
+	position: sticky;
+	z-index:5;
+	top:0;
+	left:0;
 }
 body{
 	background: red url('../assets/bg.jpg') no-repeat;
@@ -24,7 +28,7 @@ body{
 	padding: 0.50rem;
 	border-radius: 5px;
 	padding: 0.5rem;
-	background-color: #DC143C;
+	background-color: #ED5005;
 	color:white;
 	font-size:15px;
 	font-family: 'Trebuchet MS', sans-serif;
@@ -33,7 +37,8 @@ table{
 	border:2px solid black;
 	border-collapse: collapse;
 	text-align: center;
-	margin-left:3%
+	margin:0 auto;
+	
 }
 
 th,td{
@@ -41,7 +46,8 @@ th,td{
 	border-collapse: collapse;
 	width:10%;
 	background-color:white;
-	font-size:18px;
+	font-size:20px;
+	padding:0.25rem;
 }
 
 {box-sizing: border-box;}
@@ -59,7 +65,7 @@ th,td{
 	position:fixed;
 	border: 2px solid black;
 	margin-left:30%;
-	margin-top:-8%;
+	margin-top:-5%;
 	width:40%
 }
 
