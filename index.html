@@ -16,7 +16,7 @@
 </div>
 
 
-<div class="form-popup" id="addNewEntity">
+<div class="form-popup" id="createNewEntity">
 	<form action="php/newEntity.php" class="form-container" method="post">
 		<label for="title">Title: <label>
 			<input type="text" id="title" name="title"><br>
@@ -39,7 +39,7 @@
 			<input type="date" id="dateStarted" name="dateStarted"><br>
 		<label for="dateFinished">Date Finished: <label>
 			<input type="date" id="dateFinished" name="dateFinished"><br>
-		<button type="submit" class="btn">Submit</button>
+		<button type="submit">Submit</button>
 	</form>
 </div>
 <div class="form-popup" id="searchEntity">
@@ -67,7 +67,7 @@
 			<input type="date" id="dateStarted"><br>
 		<label for="dateFinished">Date Finished: <label>
 			<input type="date" id="dateFinished"><br>
-		<button type="submit" class="btn">Update</button>
+		<button type="submit">Update</button>
 	</form>
 </div>
 <div class="form-popup" id="deleteEntity">
@@ -90,23 +90,27 @@
 			<input type="date" id="dateStarted" disabled><br>
 		<label for="dateFinished">Date Finished: <label>
 			<input type="date" id="dateFinished" disabled><br>
-		<button type="submit" class="btn">Delete</button>
+		<button type="submit">Delete</button>
 	</form>
 
 </div>
 
 <div>
-<table id="atable">
-	<tr>
-		<th>Title</th>
-		<th>English Title</th>
-		<th>Seasons</th>
-		<th>Episodes</th>
-		<th>Status</th>
-		<th>Rating</th>
-		<th>Date Started</th>
-		<th>Date Finished</th>
-	</tr>
+<table>
+	<thead>
+		<tr>
+			<th>TITLE</th>
+			<th>ENGLISH TITLE</th>
+			<th>SEASONS</th>
+			<th>EPISODES</th>
+			<th>STATUS</th>
+			<th>RATING</th>
+			<th>DATE STARTED</th>
+			<th>DATE FINISHED</th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
 </div>
 
 <script src="js/form.js">

@@ -39,7 +39,7 @@
 			<input type="date" id="dateStarted" name="dateStarted"><br>
 		<label for="dateFinished">Date Finished: <label>
 			<input type="date" id="dateFinished" name="dateFinished"><br>
-		<button type="submit" class="btn">Submit</button>
+		<button type="submit">Submit</button>
 	</form>
 </div>
 <div class="form-popup" id="searchEntity">
@@ -67,7 +67,7 @@
 			<input type="date" id="dateStarted"><br>
 		<label for="dateFinished">Date Finished: <label>
 			<input type="date" id="dateFinished"><br>
-		<button type="submit" class="btn">Update</button>
+		<button type="submit">Update</button>
 	</form>
 </div>
 <div class="form-popup" id="deleteEntity">
@@ -90,7 +90,7 @@
 			<input type="date" id="dateStarted" disabled><br>
 		<label for="dateFinished">Date Finished: <label>
 			<input type="date" id="dateFinished" disabled><br>
-		<button type="submit" class="btn">Delete</button>
+		<button type="submit">Delete</button>
 	</form>
 
 </div>
