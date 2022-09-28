@@ -69,7 +69,7 @@ tbody{font-size:18px;}
 	padding: 10px;
 	font-size: 15px;
 	font-family: 'Trebuchet MS', sans-serif;
-	width:100%;
+	width:100%
 }
 
 .form-popup{
@@ -116,6 +116,13 @@ tbody{font-size:18px;}
 	margin: 5px 0 15px 0;
 	border: 1px solid white;
 	background: #f1f1f1;
+}
+.form-container select{
+	width:30%;
+	padding:10px;
+	margin: 5px 0 15px 0;
+	border: 1px solid white;
+	background: #f1f1f1;
 	margin-left: 8%;
 }
 
@@ -127,6 +134,17 @@ tbody{font-size:18px;}
 	color:white;
 	font-size:15px;
 	font-weight: bold;
+	font-family: 'Trebuchet MS', sans-serif;
+	margin-left:80%
+}
+
+.form-container button{
+	border: 0.5px solid white;
+	padding: 0.50rem;
+	border-radius: 5px;
+	background-color: #ED5005;
+	color:white;
+	font-size:15px;
 	font-family: 'Trebuchet MS', sans-serif;
 	margin-left:80%
 }
