@@ -1,8 +1,9 @@
 <?php
 include("connection.php");
 
-  $title = $engTitle = $seasons = $eps = $status = $dateStarted = $dateFinished = "";
+  $id = $title = $engTitle = $seasons = $eps = $status = $dateStarted = $dateFinished = "";
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST["ID"];
     $title = $_POST["title"];
 	$engTitle = $_POST["engTitle"];
 	$seasons = $_POST["seasons"];
@@ -11,8 +12,11 @@ include("connection.php");
 	$dateStarted = $_POST["dateStarted"];
 	$dateFinished = $_POST["dateFinished"];
   }
-$sql = "INSERT INTO animelist (title, engTitle, seasons, eps, status, dateStarted, dateFinished)
-VALUES ('$title', '$engTitle','$seasons','$eps','$status','$dateStarted','$dateFinished')";
+
+  $sql = "UPDATE animelist
+        SET title='$title', engTitle='$engTitle', seasons='$seasons',eps='$eps',status='$status',dateStarted='$dateStarted', dateFinished='$dateFinished'
+    WHERE ID='$id';
+    ";
 
 if ($conn->query($sql) === TRUE) {
 } else {
@@ -20,5 +24,5 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-header('Location: ../index.php')
+header('Location: ../index.php');
 ?>

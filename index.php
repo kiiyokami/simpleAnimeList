@@ -11,135 +11,93 @@
 
 <div class="center">
 <button class="btn" onclick="addEntity()"> <b>Add to List</b> </button>
-<button class="btn" onclick="updateEntity()"> <b>Update</b> </button>
-<button class="btn" onclick="deleteEntity()"> <b>Delete</b> </button>
 </div>
-
 
 <div class="form-popup" id="createNewEntity">
 	<form action="php/newEntity.php" class="form-container" method="post">
-		<label for="title">Title: <label>
+	<span class="close" id="close">&times;</span>
+	<h2 style="text-align: center;">Add Entity</h2>
+	<br>
+		<label for="title">Title<label><br>
 			<input type="text" id="title" name="title"><br>
-		<label for="engTitle">English Title: <label>
+		<label for="engTitle">English Title<label><br>
 			<input type="text" id="engTitle" name="engTitle"><br>
-		<label for="seasons">Seasons: <label>
+		<label for="seasons">Seasons<label><br>
 			<input type="number" id="seasons" name="seasons" min="1" max="99"><br>
-		<label for="eps">Episodes: <label>
+		<label for="eps">Episodes<label><br>
 				<input type="number" id="eps" name="eps" min="1" max="9999"><br>
-		<label for="status">Status: <label>
+		<label for="status">Status<label><br>
 			<select name="status" id="status" name="status">
-				<option value="inProgress">In Progress</option>
-				<option value="finished">Finished</option>
-				<option value="dropped">Dropped</option>
-				<option value="notStarted">Not Started</option>
+				<option value="In Progress">In Progress</option>
+				<option value="Finished">Finished</option>
+				<option value="Dropped">Dropped</option>
+				<option value="Not Started">Not Started</option>
 			</select><br>
-		<label for="rating">Rating (1-10): <label>
-			<input type="number" id="rating" name="rating" min="1" max="10" maxlength="2"><br>
-		<label for="dateStarted">Date Started: <label>
+		<label for="dateStarted">Date Started<label><br>
 			<input type="date" id="dateStarted" name="dateStarted"><br>
-		<label for="dateFinished">Date Finished: <label>
+		<label for="dateFinished">Date Finished<label><br>
 			<input type="date" id="dateFinished" name="dateFinished"><br>
 		<button type="submit" class="btn">Submit</button>
-	</form>
-</div>
-<div class="form-popup" id="searchEntity">
+		</form>
 </div>
 <div class="form-popup" id="updateEntity">
-	<form action="/php/updateEntity.php" class="form-container">
-	<label for="title">Title: <label>
-			<input type="text" id="title"><br>
-		<label for="engTitle">English Title: <label>
-			<input type="text" id="engTitle"><br>
-		<label for="seasons">Seasons: <label>
-			<input type="number" id="seasons" min="1" max="99"><br>
-		<label for="eps">Episodes: <label>
-				<input type="number" id="eps" min="1" max="9999"><br>
-		<label for="status">Status: <label>
-			<select name="status" id="status">
-				<option value="inProgress">In Progress</option>
-				<option value="finished">Finished</option>
-				<option value="dropped">Dropped</option>
-				<option value="notStarted">Not Started</option>
-			</select><br>
-		<label for="rating">Rating (1-10): <label>
-			<input type="number" id="rating" min="1" max="10" maxlength="2"><br>
-		<label for="dateStarted">Date Started: <label>
-			<input type="date" id="dateStarted"><br>
-		<label for="dateFinished">Date Finished: <label>
-			<input type="date" id="dateFinished"><br>
-		<button type="submit" class="btn">Update</button>
+	<form action="php/updateEntity.php" class="form-container" method="post">
+	<span class="close" id="shut">&times;</span>
+	<h2 style="text-align: center;">Update Entity</h2>
+		<input style="display:none;" id="cID" name="ID" readonly><br>
+	<label for="title">Title<label><br>
+		<input type="text" id="cTitle" name="title"><br>
+	<label for="engTitle">English Title<label><br>
+		<input type="text" id="cengTitle" name="engTitle"><br>
+	<label for="seasons">Seasons<label><br>
+		<input type="number" id="cseasons" name="seasons" min="1" max="99"><br>
+	<label for="eps">Episodes<label><br>
+			<input type="number" id="ceps" name="eps" min="1" max="9999"><br>
+	<label for="status">Status<label><br>
+		<select name="status" id="cstatus">
+			<option value="In Progress">In Progress</option>
+			<option value="Finished">Finished</option>
+			<option value="Dropped">Dropped</option>
+			<option value="Not Started">Not Started</option>
+		</select><br>
+	<label for="dateStarted">Date Started<label><br>
+		<input type="date" id="cdateStarted" name="dateStarted"><br>
+	<label for="dateFinished">Date Finished<label><br>
+		<input type="date" id="cdateFinished" name="dateFinished"><br>
+	<button type="submit" class="btn">Update</button>
 	</form>
 </div>
 <div class="form-popup" id="deleteEntity">
-	<form action="php/deleteEntity.php" class="form-container">
-		<label for="id">ID: <label>
-			<input type="text" id="id" readonly><br>
-		<label for="title">Title: <label>
-			<input type="text" id="title" disabled><br>
-		<label for="engTitle">English Title: <label>
-			<input type="text" id="engTitle" disabled><br>
-		<label for="seasons">Seasons: <label>
-			<input type="number" id="seasons" min="1" max="99" disabled><br>
-		<label for="eps">Episodes: <label>
-			<input type="number" id="eps" min="1" max="9999" disabled><br>
-		<label for="status">Status: <label>
-			<input type="text" id="status" disabled><br>
-		<label for="rating">Rating (1-10): <label>
-			<input type="number" id="rating" min="1" max="10" maxlength="2" disabled><br>
-		<label for="dateStarted">Date Started: <label>
-			<input type="date" id="dateStarted" disabled><br>
-		<label for="dateFinished">Date Finished: <label>
-			<input type="date" id="dateFinished" disabled><br>
+	<form action="php/deleteEntity.php" class="form-container" method="post">
+		<span class="close" id="down">&times;</span>
+		<h2 style="text-align: center;">Delete Entity</h2>
+		<input style="display:none;" id="dID" name="id"><br>
+		<p id="deletequery"></p>
 		<button type="submit" class="btn">Delete</button>
 	</form>
-
 </div>
 
 <div>
-<table>
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>English Title</th>
-			<th>Seasons</th>
-			<th>Episodes</th>
-			<th>Status</th>
-			<th>Rating</th>
-			<th>Date Started</th>
-			<th>Date Finished</th>
-		</tr>
-	</thead>
-	<tbody class="aTableBody">
-	<?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "password";
-	$dbname = "aniList";
-
-	$conn = new mysqli($servername, $username, $password, $dbname);
-
-
-		$sql = "SELECT title, engTitle, seasons, eps, status, rating, dateStarted, dateFinished FROM animelist";
-    
-    	if ($result = mysqli_query($conn, $sql)) {
-        	if ($result->num_rows > 0){
-            	while($row = $result->fetch_assoc()){
-                	echo "<tr>";
-                	echo "<td>". $row["title"]."</td><td>".$row["engTitle"]."</td><td>".$row["seasons"]."</td><td>".$row["eps"]."</td><td>".$row["status"]."</td><td>".$row["rating"]."</td><td>".$row["dateStarted"]."</td><td>".$row["dateFinished"]."</td>";
-                	echo "</tr>";
-            }
-        }
-         
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-
-?>
-	</tbody>
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>English Title</th>
+				<th>Seasons</th>
+				<th>Episodes</th>
+				<th>Status</th>
+				<th>Date Started</th>
+				<th>Date Finished</th>
+				<th>Modify</th>
+			</tr>
+		</thead>
+		<tbody id="theList">
+		<?php include 'php/table.php'; ?>
+		</tbody>
+	</table>
 </div>
+<script src="js/query.js"></script>
+<script src="js/form.js"></script>
 
-<script src="js/form.js">
-</script>
 </body>
 </html>
