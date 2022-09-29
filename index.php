@@ -28,10 +28,11 @@
 				<input type="number" id="eps" name="eps" min="1" max="9999"><br>
 		<label for="status">Status<label><br>
 			<select name="status" id="status" name="status">
-				<option value="In Progress">In Progress</option>
+			<option value="Not Started">Not Started</option>
+				<option value="Watching">Watching</option>
 				<option value="Finished">Finished</option>
 				<option value="Dropped">Dropped</option>
-				<option value="Not Started">Not Started</option>
+				
 			</select><br>
 		<label for="dateStarted">Date Started<label><br>
 			<input type="date" id="dateStarted" name="dateStarted"><br>

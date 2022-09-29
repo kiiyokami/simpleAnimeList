@@ -16,7 +16,7 @@
 <div class="form-popup" id="createNewEntity">
 	<form action="php/newEntity.php" class="form-container" method="post">
 	<span class="close" id="close">&times;</span>
-	<h2 style="text-align: center;">Add Entity</h2>
+	<h2 style="text-align: center;">Add Anime</h2>
 	<br>
 		<label for="title">Title<label><br>
 			<input type="text" id="title" name="title"><br>
@@ -28,10 +28,11 @@
 				<input type="number" id="eps" name="eps" min="1" max="9999"><br>
 		<label for="status">Status<label><br>
 			<select name="status" id="status" name="status">
-				<option value="In Progress">In Progress</option>
+				<option value="Not Started">Not Started</option>
+				<option value="Watching">Watching</option>
 				<option value="Finished">Finished</option>
 				<option value="Dropped">Dropped</option>
-				<option value="Not Started">Not Started</option>
+				
 			</select><br>
 		<label for="dateStarted">Date Started<label><br>
 			<input type="date" id="dateStarted" name="dateStarted"><br>
@@ -54,21 +55,31 @@
 </form>
 </div>
 
-<div>
+<div class="table-div">
 <table>
 	<thead>
 		<tr>
+			<th style="width: 40px;">#</th>
 			<th>Title</th>
 			<th>English Title</th>
-			<th>Seasons</th>
-			<th>Episodes</th>
-			<th>Status</th>
-			<th>Date Started</th>
-			<th>Date Finished</th>
+			<th style="width: 40px;">Seasons</th>
+			<th style="width: 40px;">Episodes</th>
+			<th style="width: 40px;">Status</th>
+			<th style="width: 40px;">Date Started</th>
+			<th style="width: 40px;">Date Finished</th>
 			<th>Modify</th>
 		</tr>
 	</thead>
 	<tbody>
+		<td>1</td>
+		<td>Natsume Yuujinchou</td>
+		<td>Natsume's Book of Friends </td>
+		<td>6</td>
+		<td>13</td>
+		<td>Not Started</td>
+		<td>04/27/2001</td>
+		<td>04/27/2020</td>
+		<td>Modify</td>
 	</tbody>
 </div>
 
