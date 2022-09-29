@@ -28,7 +28,7 @@ body {
 	overflow: auto;
 }
 .close {
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: 700;
 	margin-left: 90%;
 	color: black;
@@ -118,11 +118,6 @@ tbody {
 	position: fixed;
 	border: 1px solid #E9E9E7;
 	margin-top: -10%;
-	/*
-	
-	
-	
-	*/
 	height: 500rem;
 	width: 100%
 }
@@ -131,7 +126,7 @@ tbody {
 	width: 35%;
 	background-color: white;
 	margin-left: 32%;
-	margin-top: 5%;
+	margin-top: 3%;
 }
 
 .form-container h2, hr {
