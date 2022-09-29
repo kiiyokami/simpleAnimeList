@@ -9,7 +9,7 @@
         	if ($result->num_rows > 0){
             	while($row = $result->fetch_assoc()){
                 	echo "<tr id='row".$row["ID"]."'>";
-                	echo "<td style='display:none;'>".$row["ID"]."</td>
+                	echo "<td>".$row["ID"]."</td>
 					<td>". $row["title"]."</td>
 					<td>".$row["engTitle"]."</td>
 					<td>".$row["seasons"]."</td>

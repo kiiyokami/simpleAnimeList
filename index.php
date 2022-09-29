@@ -8,7 +8,6 @@
 <nav>
 <b>AniList</b>
 </nav>
-
 <div class="center">
 <button class="btn" onclick="addEntity()"> <b>Add to List</b> </button>
 </div>
@@ -82,6 +81,7 @@
 	<table>
 		<thead>
 			<tr>
+				<th style="width: 40px;">#</th>
 				<th>Title</th>
 				<th>English Title</th>
 				<th>Seasons</th>
