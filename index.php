@@ -55,10 +55,10 @@
 			<input type="number" id="ceps" name="eps" min="1" max="9999"><br>
 	<label for="status">Status<label><br>
 		<select name="status" id="cstatus">
-			<option value="In Progress">In Progress</option>
-			<option value="Finished">Finished</option>
-			<option value="Dropped">Dropped</option>
 			<option value="Not Started">Not Started</option>
+				<option value="Watching">Watching</option>
+				<option value="Finished">Finished</option>
+				<option value="Dropped">Dropped</option>
 		</select><br>
 	<label for="dateStarted">Date Started<label><br>
 		<input type="date" id="cdateStarted" name="dateStarted"><br>
@@ -84,12 +84,12 @@
 				<th style="width: 40px;">#</th>
 				<th>Title</th>
 				<th>English Title</th>
-				<th>Seasons</th>
-				<th>Episodes</th>
-				<th>Status</th>
-				<th>Date Started</th>
-				<th>Date Finished</th>
-				<th>Modify</th>
+				<th style="width: 40px;">Seasons</th>
+				<th style="width: 40px;">Episodes</th>
+				<th style="width: 40px;">Status</th>
+				<th style="width: 40px;">Date Started</th>
+				<th style="width: 40px;">Date Finished</th>
+				<th style="width: 30px;">Modify</th>
 			</tr>
 		</thead>
 		<tbody id="theList">
