@@ -1,97 +1,178 @@
-*{
-	height:100%;
-	padding:0;
-	margin:0;
-}
-nav{
-	text-align:center;
-	background-color:white;
-	color: #DC143C;
-	font-size: 36px;
-	font-family: 'Brush Script MT', cursive;
-}
-body{
-	background: pink url('../assets/bg.jpg') no-repeat;
-	margin:0%;
-	padding:0%
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 	
 }
-.center{
-	margin-left:2%;
-	padding: 1rem;
+
+html {
+	font-family: "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.btn{
-	border: 0.5px solid black;
+
+nav {
+	text-align: center;
+	background-color: white;
+	color: #F7631C;
+	font-size: 36px;
+	font-family: 'Brush Script MT', cursive;
+	position: sticky;
+	z-index: 5;
+	top: 0;
+	left: 0;
+}
+
+body {
+	background: orange url('../assets/bg.jpg') no-repeat;
+	background-position: 100% -5%;
+	background-size: cover;
+	overflow: auto;
+}
+.close {
+	font-size: 25px;
+	font-weight: 700;
+	margin-left: 90%;
+	color: black;
+	cursor: pointer;
+}
+
+.center {
+	text-align: right;
+	padding: 2% 2.5% 0 0;
+	width: 100%;
+}
+
+.btn {
+	border: 0.5px solid #E9E9E7;
 	padding: 0.50rem;
 	border-radius: 5px;
-	padding: 0.5rem;
-	background-color: #DC143C;
-	color:white;
-	font-size:15px;
-	font-family: 'Trebuchet MS', sans-serif;
-	}
-table{
-	border:2px solid black;
-	border-collapse: collapse;
-	text-align: center;
-	margin-left:3%
-}
-
-th,td{
-	border:1px solid black;
-	border-collapse: collapse;
-	width:10%;
-	background-color:white;
-	font-size:18px;
-}
-
-
-
-.form-container{
-	padding: 15px;
+	background-color: #2383E2;
+	/* old color */
+	/* #ED5005 */
+	color: white;
 	font-size: 15px;
 	font-family: 'Trebuchet MS', sans-serif;
-	width:90%
+	cursor: pointer;
 }
 
-.form-popup{
-	display:none;
-	background-color:white;
-	position:fixed;
-	border: 2px solid black;
-	margin-left:30%;
-	margin-top:-8%;
-	width:40%
+/* style for table list */
+.table-div{
+	width: 100%;
 }
 
-.form-container input[type=text]{
-	width:60%;
-	padding:10px;
+table {
+	width: 95%;
+	border: 1px solid #E9E9E7;
+	border-collapse: collapse;
+	margin: 0 2.5% 0 2.5%;
+	color: #37352F;
+}
+
+table th{
+	text-align: left;
+}
+
+th, td {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	
+	border: 1px solid #E9E9E7;
+	border-collapse: collapse;
+	background-color: white;
+	padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+}
+
+thead {
+	font-size: 15px;
+}
+
+tbody {
+	font-size: 14px;
+}
+
+/* style for add, update overlay form */
+.outer-popup {
+	display: none;
+	background: hsla(50, 100%, 50%, 0.7);
+	position: center;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-container {
+	padding: 20px;
+	font-size: 15px;
+	width: 100%;
+}
+
+.form-popup {
+	z-index: 10;
+	display: none;
+	position: sticky;
+	background-color: rgb(153,153,153, 0.5);
+	color: #37352F;
+	position: fixed;
+	border: 1px solid #E9E9E7;
+	margin-top: -10%;
+	height: 500rem;
+	width: 100%
+}
+
+.form-container {
+	width: 35%;
+	background-color: white;
+	margin-left: 32%;
+	margin-top: 3%;
+}
+
+.form-container h2, hr {
+	margin-left: -5%;
+}
+
+.form-container label {
+	margin-left: 8%;
+}
+
+.form-container input[type=text] {
+	width: 60%;
+	padding: 8px;
 	margin: 5px 0 15px 0;
-	border: 1px solid black;
-	background: #f1f1f1;
+	border: 1px solid white;
+	background: #E9E9E7;
+	margin-left: 8%;
 }
 
-.form-container input[type=number]{
-	width:12%;
-	padding:10px;
+.form-container input[type=number] {
+	width: 12%;
+	padding: 8px;
 	margin: 5px 0 15px 0;
-	border: 1px solid black;
-	background: #f1f1f1;
+	border: 1px solid white;
+	background: #E9E9E7;
+	margin-left: 8%;
 }
 
-.form-container input[type=date]{
-	width:30%;
-	padding:10px;
+.form-container input[type=date], select {
+	width: 30%;
+	padding: 8px;
 	margin: 5px 0 15px 0;
-	border: 1px solid black;
-	background: #f1f1f1;
-}
-.form-container select{
-	width:30%;
-	padding:10px;
-	margin: 5px 0 15px 0;
-	border: 1px solid black;
-	background: #f1f1f1;
+	border: 1px solid white;
+	background: #E9E9E7;
+	margin-left: 8%;
 }
 
+.form-container button {
+	border: 0.5px solid #A5A4A1;
+	padding: 0.60rem;
+	border-radius: 5px;
+	background-color: #2383E2;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: 'Trebuchet MS', sans-serif;
+	margin-left: 80%;
+	cursor: pointer;
+}
