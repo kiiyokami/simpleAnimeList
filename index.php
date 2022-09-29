@@ -43,7 +43,7 @@
 <div class="form-popup" id="updateEntity">
 	<form action="php/updateEntity.php" class="form-container" method="post">
 	<span class="close" id="shut">&times;</span>
-	<h2 style="text-align: center;">Update Entity</h2>
+	<h2 style="text-align: center;">Update Anime</h2>
 		<input style="display:none;" id="cID" name="ID" readonly><br>
 	<label for="title">Title<label><br>
 		<input type="text" id="cTitle" name="title"><br>
@@ -70,7 +70,7 @@
 <div class="form-popup" id="deleteEntity">
 	<form action="php/deleteEntity.php" class="form-container" method="post">
 		<span class="close" id="down">&times;</span>
-		<h2 style="text-align: center;">Delete Entity</h2>
+		<h2 style="text-align: center;">Delete Anime</h2>
 		<input style="display:none;" id="dID" name="id"><br>
 		<p id="deletequery"></p>
 		<button type="submit" class="btn">Delete</button>
