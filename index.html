@@ -1,89 +1,87 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<title>AniList</title>
-<link rel="stylesheet" href="css/index.css">
+	<title>AniList</title>
+	<link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-<nav>
-<b>AniList</b>
-</nav>
 
-<div class="center">
-<button class="btn" onclick="addEntity()"> <b>Add to List</b> </button>
-</div>
+	<nav>
+		<b>AniList</b>
+	</nav>
 
-<div class="form-popup" id="createNewEntity">
-	<form action="php/newEntity.php" class="form-container" method="post">
-	<span class="close" id="close">&times;</span>
-	<h2 style="text-align: center;">Add Anime</h2>
-	<br>
-		<label for="title">Title<label><br>
-			<input type="text" id="title" name="title"><br>
-		<label for="engTitle">English Title<label><br>
-			<input type="text" id="engTitle" name="engTitle"><br>
-		<label for="seasons">Seasons<label><br>
-			<input type="number" id="seasons" name="seasons" min="1" max="99"><br>
-		<label for="eps">Episodes<label><br>
-				<input type="number" id="eps" name="eps" min="1" max="9999"><br>
-		<label for="status">Status<label><br>
-			<select name="status" id="status" name="status">
-				<option value="Not Started">Not Started</option>
-				<option value="Watching">Watching</option>
-				<option value="Finished">Finished</option>
-				<option value="Dropped">Dropped</option>
-				
-			</select><br>
-		<label for="dateStarted">Date Started<label><br>
-			<input type="date" id="dateStarted" name="dateStarted"><br>
-		<label for="dateFinished">Date Finished<label><br>
-			<input type="date" id="dateFinished" name="dateFinished"><br>
-		<button type="submit">Submit</button>
-	</form>
-</div>
-<div class="form-popup" id="updateEntity">
-<form action="php/updateEntity.php" class="form-container" method="post">
-</form>
-</div>
-<div class="form-popup" id="deleteEntity">
-<form action="php/deleteEntity.php" class="form-container" method="post">
-<span class="close" id="shut">&times;</span>
-	<h2 style="text-align: center;">Delete Entity</h2>
-	<br>
-	<input type="text" id="animeID" value="placeholder" readonly><br>
-	<button type="submit" class="btn">Confirm</button>
-</form>
-</div>
+	<div class="cover">
+		<img src="assets/bg.jpg" alt="">
+	</div>
+	<div class="center">
+		<button class="btn" onclick="addEntity()"> <b>Add to List</b> </button>
+	</div>
 
-<div class="table-div">
-<table>
-	<thead>
-		<tr>
-			<th style="width: 40px;">#</th>
-			<th>Title</th>
-			<th>English Title</th>
-			<th style="width: 40px;">Seasons</th>
-			<th style="width: 40px;">Episodes</th>
-			<th style="width: 40px;">Status</th>
-			<th style="width: 40px;">Date Started</th>
-			<th style="width: 40px;">Date Finished</th>
-			<th>Modify</th>
-		</tr>
-	</thead>
-	<tbody>
-		<td>1</td>
-		<td>Natsume Yuujinchou</td>
-		<td>Natsume's Book of Friends </td>
-		<td>6</td>
-		<td>13</td>
-		<td>Not Started</td>
-		<td>04/27/2001</td>
-		<td>04/27/2020</td>
-		<td>Modify</td>
-	</tbody>
-</div>
+	<div class="form-popup" id="createNewEntity">
+		<form action="php/newEntity.php" class="form-container" method="post">
+			<span class="close" id="close">&times;</span>
+			<h2 style="text-align: center;">Add Anime</h2>
+			<label for="title">Title<label><br>
+					<input type="text" id="title" name="title"><br>
+					<label for="engTitle">English Title<label><br>
+							<input type="text" id="engTitle" name="engTitle"><br>
+							<label for="seasons">Seasons<label><br>
+									<input type="number" id="seasons" name="seasons" min="1" max="99"><br>
+									<label for="eps">Episodes<label><br>
+											<input type="number" id="eps" name="eps" min="1" max="9999"><br>
+											<label for="status">Status<label><br>
+													<select name="status" id="status" name="status">
+														<option value="Not Started">Not Started</option>
+														<option value="Watching">Watching</option>
+														<option value="Finished">Finished</option>
+														<option value="Dropped">Dropped</option>
 
-<script src="js/form.js">
-</script>
+													</select><br>
+													<label for="dateStarted">Date Started<label><br>
+															<input type="date" id="dateStarted" name="dateStarted"><br>
+															<label for="dateFinished">Date Finished<label><br>
+																	<input type="date" id="dateFinished"
+																		name="dateFinished"><br>
+																	<button type="submit">Submit</button>
+		</form>
+	</div>
+	<div class="form-popup" id="updateEntity">
+		<form action="php/updateEntity.php" class="form-container" method="post">
+		</form>
+	</div>
+	<div class="form-popup" id="deleteEntity">
+		<form action="php/deleteEntity.php" class="form-container" method="post">
+			<span class="close" id="shut">&times;</span>
+			<h2 style="text-align: center;">Delete Entity</h2>
+			<br>
+			<input type="text" id="animeID" value="placeholder" readonly><br>
+			<button type="submit" class="btn">Confirm</button>
+		</form>
+	</div>
+
+	<div class="table-div">
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 40px;">#</th>
+					<th>Title</th>
+					<th>English Title</th>
+					<th style="width: 40px;">Seasons</th>
+					<th style="width: 40px;">Episodes</th>
+					<th style="width: 40px;">Status</th>
+					<th style="width: 40px;">Date Started</th>
+					<th style="width: 40px;">Date Finished</th>
+					<th style="width: 40px;">Modify</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+	</div>
+
+	<script src="js/form.js">
+	</script>
 </body>
+
 </html>
