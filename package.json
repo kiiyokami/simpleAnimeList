@@ -1,0 +1,23 @@
+{
+  "name": "simpleanimelist",
+  "version": "2.0.0",
+  "description": "A fork of the simpleAnimeList, will be refactored from php to node.js",
+  "main": "server.js",
+    "dependencies": {
+      "express": "^4.18.1",
+      "nodemon": "^2.0.20"
+    },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiiyokami/simpleAnimeList.git"
+  },
+  "author": "kiiyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiiyokami/simpleAnimeList/issues"
+  },
+  "homepage": "https://github.com/kiiyokami/simpleAnimeList#readme"
+}
