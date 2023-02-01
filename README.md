@@ -1,2 +1,2 @@
 # simpleAnimeList
-simple anime db website
+forked and porting to node js
