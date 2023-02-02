@@ -32,7 +32,7 @@ app.get("/", async (req, res, next) => {
     const sql = "SELECT * FROM animeList";
     const rows = await conn.query(sql);
     res.render("index", { data: rows });
-    conn.close();
+    conn.end();
   } catch (error) {
     console.log(error);
     req.flash("error", error);
