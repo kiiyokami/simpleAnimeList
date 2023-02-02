@@ -11,7 +11,7 @@ const db = mariadb.createPool({
   user: "admin",
   password: "password",
   database: "mariadb",
-  connectionLimit: 5,
+  connectionLimit: 10,
 });
 const port = 8080;
 
@@ -32,6 +32,7 @@ app.get("/", async (req, res, next) => {
     const sql = "SELECT * FROM animeList";
     const rows = await conn.query(sql);
     res.render("index", { data: rows });
+    conn.close();
   } catch (error) {
     console.log(error);
     req.flash("error", error);
