@@ -1,5 +1,6 @@
 function updateEntity(id){
     closeForm();
+
     var animeID = document.getElementById(id).children[0].innerHTML;
     var title = document.getElementById(id).children[1].innerHTML;
     var engTitle = document.getElementById(id).children[2].innerHTML;
@@ -10,6 +11,7 @@ function updateEntity(id){
     var dateFinished= document.getElementById(id).children[7].innerHTML;
 
     document.getElementById("updateEntity").style.display = "block";
+    document.getElementById("update-form").action = '/update/' + animeID;;
     document.getElementById("cID").value = animeID;
     document.getElementById("cTitle").value = title;
     document.getElementById("cengTitle").value = engTitle;
@@ -18,6 +20,9 @@ function updateEntity(id){
     document.getElementById("cstatus").value = status;
     document.getElementById("cdateStarted").value = dateStarted;
     document.getElementById("cdateFinished").value = dateFinished;
+
+
+      
 
 }
 function deleteEntity(id){

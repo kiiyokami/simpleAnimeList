@@ -41,10 +41,11 @@
 		</form>
 </div>
 <div class="form-popup" id="updateEntity">
-	<form action="php/updateEntity.php" class="form-container" method="post">
+	
+	<form action='' id="update-form" class="form-container" method="post">
 	<span class="close" id="shut">&times;</span>
 	<h2 style="text-align: center;">Update Anime</h2>
-		<input style="display:none;" id="cID" name="ID" readonly><br>
+		<input style="display:none;" id="cID" name="id"><br>
 	<label for="title">Title<label><br>
 		<input type="text" id="cTitle" name="title"><br>
 	<label for="engTitle">English Title<label><br>
@@ -68,7 +69,8 @@
 	</form>
 </div>
 <div class="form-popup" id="deleteEntity">
-	<form action="php/deleteEntity.php" class="form-container" method="post">
+	<form action='/delete' class="form-container" method="post">
+		<input type="hidden" name="_method" value="delete">
 		<span class="close" id="down">&times;</span>
 		<h2 style="text-align: center;">Delete Anime</h2>
 		<input style="display:none;" id="dID" name="id"><br>
@@ -94,7 +96,7 @@
 		</thead>
 		<tbody id="theList">
 			<% if(data.length > 0){ for(var i=0;i<data.length;i++) {%>
-				<tr>
+				<tr id=row<%= data[i].id%>>
 				  <th scope="row"><%= (i+1) %></th>
 				  <td><%= data[i].title%></td>
 				  <td><%= data[i].engTitle%></td>
@@ -104,8 +106,8 @@
 				  <td><%= data[i].dateStarted.toLocaleDateString()%></td>
 				  <td><%= data[i].dateFinished.toLocaleDateString()%></td>
 				  <td>
-					<button class='btn' onclick=""><b>Update</b></button>
-					<button class='btn' onclick=""> <b>Delete</b></button>
+					<button class='btn' onclick="updateEntity('row<%= data[i].id%>')"><b>Update</b></button>
+					<button class='btn' onclick="deleteEntity('row<%= data[i].id%>')"> <b>Delete</b></button>
 				  </td>
 				</tr>
 			<% } }else{ %> 
